@@ -1,21 +1,27 @@
 #!/usr/bin/env python3
 """
 Created by: Erik
-Created on: Nov 25
-This program checks if a number is even or odd.
+Created on: Nov 2025
+This program checks if a person is eligible to vote in Canada.
 """
 
 
 def main() -> None:
-    """The main() function gets a number and tells the user if it is even or odd."""
-    # Input
-    user_number = int(input("Enter an integer: "))
+    """The main() function gets the user's age and tells them if they can vote."""
+    try:
+        # Input
+        age = int(input("Enter your age: "))
 
-    # Process + Output
-    if user_number % 2 == 0:
-        print(f"{user_number} is even.")
-    else:
-        print(f"{user_number} is odd.")
+        # Process + Output
+        if age >= 18:
+            print("You are eligible to vote in Canada.")
+        elif age >= 0:
+            print("You are NOT eligible to vote in Canada.")
+        else:
+            print("Age cannot be negative.")
+
+    except ValueError:
+        print("Invalid input! Please enter a number.")
 
     print("\nDone.")
 
