@@ -1,14 +1,21 @@
 #!/usr/bin/env python3
 """
-Created by: Mr. Coxall
-Created on: Sept 2020
-This is the "Hello, World!" module, with proper style
+Created by: Erik
+Created on: Nov 25
+This program checks if a number is even or odd.
 """
 
 
 def main() -> None:
-    """The main() function prints out Hello, World!, returns None."""
-    print("Hello, World!")
+    """The main() function gets a number and tells the user if it is even or odd."""
+    # Input
+    user_number = int(input("Enter an integer: "))
+
+    # Process + Output
+    if user_number % 2 == 0:
+        print(f"{user_number} is even.")
+    else:
+        print(f"{user_number} is odd.")
 
     print("\nDone.")
 
